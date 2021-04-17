@@ -1,0 +1,16 @@
+.verification_sent {
+  background: #fff;
+  max-width: 448px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+}
+.verification_sent h1 {
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+.verification_sent__text {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}

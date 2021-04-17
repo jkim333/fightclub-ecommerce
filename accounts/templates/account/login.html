@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+{% load account socialaccount %}
+
+{% block title %}{% trans "Sign In" %}{% endblock title %}
+
+{% block customstylesheets %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock customstylesheets %}
+
+{% block content %}
+  <form class="login-form" method="POST" novalidate>
+    {% csrf_token %}
+    <h1>{% trans "Sign In" %}</h1>
+    {% get_providers as socialaccount_providers %}
+    <p class="login-form__text">Sign in to fightclubstore.com account below:</p>
+
+    {{ form.non_field_errors }}
+    <div class="fieldWrapper">
+        <label for="{{ form.login.id_for_label }}">E-mail:</label>
+        {{ form.login }}
+        {{ form.login.errors }}
+    </div>
+    <div class="fieldWrapper">
+        <label for="{{ form.password.id_for_label }}">Password:</label>
+        {{ form.password }}
+        {{ form.password.errors }}
+    </div>
+
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button class="btn login-form__btn" type="submit">{% trans "Sign In" %}</button>
+    <small class="login-form__links"><a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> | <a href="{{ signup_url }}">Sign Up</a></small>
+    
+    <div class="socialaccount_ballot">
+      <p class="socialaccount_ballot__text">Sign in with one of the 3rd party accounts:</p>
+      {% comment %} <ul class="socialaccount_providers">
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+      </ul> {% endcomment %}
+      <a title="Google" class="socialaccount_provider google" href="/accounts/google/login/?process=login"><i class="fab fa-google"></i> Google</a>
+    </div>
+  </form>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% load static %}
+
+{% block title %}{% trans "Verify E-mail" %}{% endblock %}
+
+{% block customstylesheets %}
+  <link rel="stylesheet" href="{% static 'css/verification_sent.css' %}">
+{% endblock customstylesheets %}
+
+{% block content %}
+  <div class="verification_sent">
+    <h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+    <p class="verification_sent__text">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+  </div>
+{% endblock %}

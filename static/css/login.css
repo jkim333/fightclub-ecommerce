@@ -1,0 +1,88 @@
+.login-form {
+  background: #fff;
+  max-width: 448px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+}
+.login-form h1 {
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+.login-form__text {
+  margin-bottom: 1rem;
+}
+.login-form__links {
+  margin-left: 1rem;
+}
+.login-form__links a {
+  text-decoration: none;
+  color: #4299e1;
+  font-weight: bold;
+}
+.login-form__links a:hover {
+  color: #2b6cb0;
+}
+.login-form #id_login,
+.login-form #id_password {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  background: #e2e8f0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+.login-form .fieldWrapper {
+  margin-bottom: 1rem;
+}
+.login-form .errorlist {
+  list-style: none;
+  margin-top: 0.25rem;
+  color: rgb(220, 53, 69);
+}
+.login-form .errorlist.nonfield {
+  margin-bottom: 0.25rem;
+}
+label[for='id_login'],
+label[for='id_password'] {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.socialaccount_ballot__text {
+  display: block;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+.socialaccount_provider {
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  font-weight: 700;
+  font-size: 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.socialaccount_provider.google {
+  background: #f56565;
+}
+.socialaccount_provider.google:hover {
+  background: #c53030;
+}
+.socialaccount_provider.google .fa-google {
+  margin-right: 0.5rem;
+}
+.login-form__btn {
+  background: black;
+}
+.login-form__btn:hover {
+  opacity: 0.7;
+}
