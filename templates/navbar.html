@@ -1,1 +1,26 @@
-navbar...
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__header">
+      <a class="navbar__brand" href="#">FightClub</a>
+      <button class="navbar__toggler" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="navbar__collapse">
+      <form class="navbar__search-form">
+        <input type="search" placeholder="Search">
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <ul>
+        <li class="navbar__item btn"><a href="{% url 'account_login' %}">Sign In</a></li>
+        <li class="navbar__item btn"><a href="#">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

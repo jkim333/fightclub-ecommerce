@@ -15,7 +15,7 @@
   line-height: 1.4;
 }
 .email_confirm .btn {
-  background: black;
+  background: #0f1111;
 }
 .email_confirm .btn:hover {
   opacity: 0.7;
