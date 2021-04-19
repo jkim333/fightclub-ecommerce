@@ -10,37 +10,39 @@
 {% endblock customstylesheets %}
 
 {% block content %}
-  <form class="signup-form" id="signup_form" method="post" action="{% url 'account_signup' %}" novalidate>
-    {% csrf_token %}
-    <h1>{% trans "Sign Up" %}</h1>
+  <div class="container">
+    <form class="signup-form" id="signup_form" method="post" action="{% url 'account_signup' %}" novalidate>
+      {% csrf_token %}
+      <h1>{% trans "Sign Up" %}</h1>
 
-    {{ form.non_field_errors }}
-    <div class="fieldWrapper">
-        <label for="{{ form.username.id_for_label }}">Username:</label>
-        {{ form.username }}
-        {{ form.username.errors }}
-    </div>
-    <div class="fieldWrapper">
-        <label for="{{ form.email.id_for_label }}">E-mail:</label>
-        {{ form.email }}
-        {{ form.email.errors }}
-    </div>
-    <div class="fieldWrapper">
-        <label for="{{ form.password1.id_for_label }}">Password:</label>
-        {{ form.password1 }}
-        {{ form.password1.errors }}
-    </div>
-    <div class="fieldWrapper">
-        <label for="{{ form.password2.id_for_label }}">Password (again):</label>
-        {{ form.password2 }}
-        {{ form.password2.errors }}
-    </div>
+      {{ form.non_field_errors }}
+      <div class="fieldWrapper">
+          <label for="{{ form.username.id_for_label }}">Username:</label>
+          {{ form.username }}
+          {{ form.username.errors }}
+      </div>
+      <div class="fieldWrapper">
+          <label for="{{ form.email.id_for_label }}">E-mail:</label>
+          {{ form.email }}
+          {{ form.email.errors }}
+      </div>
+      <div class="fieldWrapper">
+          <label for="{{ form.password1.id_for_label }}">Password:</label>
+          {{ form.password1 }}
+          {{ form.password1.errors }}
+      </div>
+      <div class="fieldWrapper">
+          <label for="{{ form.password2.id_for_label }}">Password (again):</label>
+          {{ form.password2 }}
+          {{ form.password2.errors }}
+      </div>
 
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
 
-    <button type="submit" class='btn signup-form__btn'>Sign Up</button>
-    <small class="signup-form__links">{% blocktrans %}<a href="{{ login_url }}">Already have an account?</a>{% endblocktrans %}</small>
-  </form>
+      <button type="submit" class='btn signup-form__btn'>Sign Up</button>
+      <small class="signup-form__links">{% blocktrans %}<a href="{{ login_url }}">Already have an account?</a>{% endblocktrans %}</small>
+    </form>
+  </div>
 {% endblock %}

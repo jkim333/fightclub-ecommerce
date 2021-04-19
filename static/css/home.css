@@ -1,0 +1,128 @@
+.new-arrivals,
+.best-sellers,
+.on-sale {
+  margin: 3rem 0;
+}
+.new-arrivals h2,
+.best-sellers h2,
+.on-sale h2 {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.new-arrivals__body,
+.best-sellers__body,
+.on-sale__body {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.product {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background: #fff;
+  border-radius: 0.25rem;
+}
+.product:hover .product__image {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.product:hover .product__image-container i {
+  z-index: 1;
+}
+.product__image-container {
+  background: #0f1111;
+  position: relative;
+}
+.product__image-container i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.product__image-container .sale-tag {
+  background: red;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 0.25rem 0;
+}
+.product__image {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.product__name {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  .new-arrivals__body,
+  .best-sellers__body,
+  .on-sale__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .new-arrivals__body,
+  .best-sellers__body,
+  .on-sale__body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* showcase start */
+.showcase {
+  position: relative;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+}
+.showcase__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+.showcase__content {
+  z-index: 1;
+}
+.showcase h1 {
+  display: block;
+  margin-bottom: 1rem;
+}
+.showcase p {
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 1rem;
+}
+.showcase .btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #c72727;
+}
+@media (min-width: 768px) {
+  .showcase .container {
+    padding: 0 2rem;
+  }
+  .showcase__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+  .showcase p {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  .showcase .btn {
+    font-size: 1rem;
+  }
+}
+/* showcase end */

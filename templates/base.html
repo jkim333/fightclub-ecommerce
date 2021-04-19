@@ -16,9 +16,8 @@
   </head>
   <body>
     {% include "navbar.html" %}
-    <div class="container">
-      {% block content %}{% endblock content %}
-    </div>
+    {% block content %}{% endblock content %}
+    {% include "footer.html" %}
     <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

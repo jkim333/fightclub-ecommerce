@@ -1,0 +1,29 @@
+{% load static %}
+<footer class="footer">
+  <div class="container">
+    <div>
+      <a href="" class="footer__logo"><img src="{% static 'img/logo.png' %}" alt=""></a>
+      <p>We are Australia's biggest combat sports equipment store. We sell the best quality equipments for a wide range of combat sports including Boxing, Jui Jitsu, MMA, Muay Thai and many more.</p>
+    </div>
+    <div>
+      <h3>Email Newsletter</h3>
+      <p>Subscribe to our email newsletter to get notification of our next storewide sales.</p>
+      <form>
+        <input type="email" name="" value="" placeholder="Enter Email...">
+        <input type="submit" name="" value="Subscribe" class="btn">
+      </form>
+    </div>
+    <div class="site-links">
+      <h3>Site Links</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p>
+        Copyright &copy; {% now "Y" %}, All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>

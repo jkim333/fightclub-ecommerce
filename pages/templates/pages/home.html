@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block customstylesheets %}
+  <style>
+    .showcase:after{
+      content: '';
+      background-image: url({% static 'img/showcase.jpg' %});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      opacity: 0.4;
+    }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock customstylesheets %}
+
+{% block content %}
+{% comment %} <section class="categories">
+  <ul>
+    <li>Gloves</li>
+    <li>Protective</li>
+    <li>Footwear</li>
+    <li>Uniforms</li>
+    <li>Coaching</li>
+    <li>Fitness</li>
+    <li>Accessories</li>
+  </ul>
+</section> {% endcomment %}
+
+<!--showcase-->
+<header class="showcase">
+  <div class="container">
+    <div class="showcase__container">
+      <div class="showcase__content">
+        <h1>Welcome to Fight Club!</h1>
+        <p>We are Australia's biggest combat sports equipment store. We sell the best quality equipments for a wide range of combat sports including Boxing, Jui Jitsu, MMA, Muay Thai and many more.</p>
+        <a href="#" class="btn">View All Products</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="underline"></div>
+    <div class="new-arrivals__body">
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/new-product-1.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/new-product-2.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/new-product-3.png' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/new-product-4.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+  </section>
+  <section class="best-sellers">
+    <h2>Best Sellers</h2>
+    <div class="underline"></div>
+    <div class="best-sellers__body">
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/new-product-1.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/featured-product-2.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/featured-product-3.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/featured-product-4.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+  </section>
+  <section class="on-sale">
+    <h2>On Sale</h2>
+    <div class="underline"></div>
+    <div class="on-sale__body">
+      <div class="product">
+        <div class="product__image-container">
+          <div class="sale-tag">Sale</div>
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/sale-product-1.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <div class="sale-tag">Sale</div>
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/sale-product-2.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <div class="sale-tag">Sale</div>
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/sale-product-3.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+      <div class="product">
+        <div class="product__image-container">
+          <div class="sale-tag">Sale</div>
+          <i class="fas fa-search"></i>
+          <img src="{% static 'img/sale-product-4.jpg' %}" alt="" class="product__image">
+        </div>
+        <h4 class="product__name"><a href="">name</a></h4>
+        <div class="star-rating">
+          star 4
+        </div>
+        <p class="product__price">$100.00</p>
+      </div>
+  </section>
+</div>
+{% endblock content %}

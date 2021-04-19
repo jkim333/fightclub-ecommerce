@@ -10,6 +10,10 @@
 body {
   background: #edf2f7;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .btn {
@@ -20,6 +24,15 @@ body {
   font-size: 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: #c72727;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -55,6 +68,7 @@ body {
   }
 }
 
+/* navbar start */
 .navbar {
   padding: 0.75rem 0;
   background: #0f1111;
@@ -64,12 +78,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
 }
 .navbar__brand {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
+}
+.navbar__brand img {
+  display: block;
+  width: 180px;
 }
 .navbar__toggler {
   background: transparent;
@@ -154,3 +171,85 @@ body {
     margin-bottom: 0;
   }
 }
+/* navbar end */
+
+/* footer start */
+.footer {
+  background: #0f1111;
+  color: #fff;
+  padding: 2rem 0;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+}
+.footer p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+.footer h3 {
+  display: block;
+  margin-bottom: 1rem;
+}
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.footer .container div:last-child {
+  background: #444;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+.footer .container div:last-child p {
+  margin: 0.5rem 0;
+}
+.footer form input {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  outline: none;
+}
+.footer form input[type='submit'] {
+  background: #c72727;
+}
+.footer .site-links ul {
+  list-style: none;
+}
+.footer .site-links ul li {
+  padding: 0.5rem 0;
+  border-bottom: #555 dotted 1px;
+}
+.footer .site-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .container div:nth-of-type(1),
+.footer .container div:nth-of-type(2) {
+  border-bottom: #555 dotted 1px;
+  padding-bottom: 0.5rem;
+}
+.footer__logo img {
+  width: 180px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .footer .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .container div:last-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .footer .container div:nth-of-type(1),
+  .footer .container div:nth-of-type(2) {
+    border-bottom: 0;
+    padding-bottom: 0rem;
+  }
+}
+/* footer end */
